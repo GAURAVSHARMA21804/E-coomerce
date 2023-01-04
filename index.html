@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basic page Layout</title>
+</head>
+<body>
+  <style>
+    #box:hover{
+      
+      text-decoration: underline;
+      text-decoration-color: darkred;
+
+    }
+  </style>
+  <style>
+    body {
+    background-color: #eee
+}
+
+.wrapper {
+    height: 50vh
+}
+
+.cardoff{
+    position: relative;
+    background-color: #7B1FA2;
+    padding: 10px;
+    width: 400px;
+    border: none
+}
+
+.content {
+    z-index: 10
+}
+
+.logo {
+    margin-bottom: 50px
+}
+
+.off {
+    line-height: 0px
+}
+
+.off h1 {
+    font-size: 80px
+}
+
+.off span {
+    margin-right: 111px
+}
+
+.plus {
+    font-size: 23px
+}
+
+.code {
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #fff;
+    color: red;
+    font-size: 20px
+}
+
+.cross-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #9C27B0;
+    left: 0px;
+    top: 0px;
+    opacity: 0.4;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    z-index: 1
+}
+  </style>
+  <style>
+ .card {
+    cursor: pointer
+}
+
+.hd {
+    font-size: 25px;
+    font-weight: 550
+}
+
+.card.hover,
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2)
+}
+
+.img {
+    margin-bottom: 35px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222)
+}
+
+.card-title {
+    font-weight: 600
+}
+
+button.focus,
+button:focus {
+    outline: 0;
+    box-shadow: none !important
+}
+
+.ft {
+    margin-top: 25px
+}
+
+.chk {
+    margin-bottom: 5px
+}
+
+.rck {
+    margin-top: 20px;
+    padding-bottom: 15px
+}
+  </style>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <h2 class="navbar-brand brand-name">
+       <a href="index.html"><img class="img-responsive2"       
+       src="https://tse3.mm.bing.net/th?id=OIP.Kfy-UHXJhoq-lGOpvLpotQHaFj&pid=Api&P=0&w=217&h=162" alt="logo" height="80" width="100"></a>
+   </h2>
+    <a class="navbar-brand nav justify-content-center" href="#"><b>E-shop</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active" id="box">
+          <a class="nav-link " href="#">Home</a>
+        </li>
+        <li class="nav-item active" id="box">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item active" id="box">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item active" id="box">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item active" id="box">
+          <a class="nav-link" href="#">Blogs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  </nav>
+
+<header>
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active" aria-current="true"aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="active" aria-current="true"aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="active" aria-current="true"aria-label="Slide 5"></button>
+
+    </div>
+    <div class="carousel-inner px-5 p-4 ms-auto">
+      <div class="carousel-item active" style="background-image: url('https://imgscf.slidemembers.com/docs/1/1/259/shopping_slide_ppt_258349.jpg')">
+        <div class="carousel-caption">
+          <h1 style="color: black;text-align: center; font-size:500%;">Hello! Welcome</h1>
+          <br>
+          <h5 style="color:black; text-align: center; font-size:160%;">Big Brand Shoping Sales</h5>
+
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/07/Air-Jordan-Shoes-Image-HD.jpg')">
+      </div>
+      <div class="carousel-item" style="background-image: url('http://eskipaper.com/images/shopping-wallpaper-hd-1.jpg')"></div>
+      <div class="carousel-item" style="background-image: url('http://www.textures.com/system/gallery/photos/Buildings/Shops/26078/Shops0177_600.jpg?v=5')">
+        
+      </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+<main>
+<br>
+<div class="wrapper px-5 d-flex justify-content-left align-items-center">
+    <div class="cardoff">
+        <div class="cross-bg"> </div>
+        <div class="content">
+            <div class="logo text-right"> <img src="https://i.imgur.com/w68MQc4.png" width="80"> </div>
+            <div class="text-center text-uppercase text-white off"> <span>Flat</span>
+                <h1 class="mt-0">50%</h1>
+            </div>
+            <div class="text-center text-white"> <span class="plus">+</span> </div>
+            <div class="text-center text-uppercase text-white">
+                <h3 class="m-0">10% OFF</h3>
+            </div>
+            <div class="px-5 mb-3">
+                <div class="code text-center mt-4"> <span>Use code : Extra10</span> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-4">
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-secondary">Shopping</strong>
+          <h3 class="mb-0">Deals up to 70% off</h3>
+          <div class="mb-1 text-muted">Apr 10</div>
+          <p class="card-text mb-auto">Best Shopping Deals with Free Delivery.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250"src="https://tse4.mm.bing.net/th?id=OIP._yZY9PFBR13CRY8nEX055gHaFj&pid=Api&P=0&w=242&h=181">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Shopping</strong>
+          <h3 class="mb-0">Deals up to 50% off</h3>
+          <div class="mb-1 text-muted">Apr 10</div>
+          <p class="mb-auto">Get exclusive Deals in E-shop.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250"src="https://tse4.mm.bing.net/th?id=OIP.uYdyR8Njy6dHr-Lrrkz5aQHaFK&pid=Api&P=0&w=260&h=181">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-4">
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Snekers</strong>
+          <h3 class="mb-0">Deals up to 60% off</h3>
+          <div class="mb-1 text-muted">Apr 10</div>
+          <p class="card-text mb-auto">Best Shopping Deals with Free Delivery.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250"src="https://tse3.mm.bing.net/th?id=OIP.WIA2PdvNWJUJ6bWxnG9aoQHaEQ&pid=Api&P=0&w=301&h=173">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-warnig">Elctornics</strong>
+          <h3 class="mb-0">Deals up to 20% off</h3>
+          <div class="mb-1 text-muted">Apr 10</div>
+          <p class="mb-auto">Get exclusive Deals in E-shop.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250"src="https://tse3.mm.bing.net/th?id=OIP.B7AmH22RFbOckI_RKOmw3AHaHa&pid=Api&P=0&w=184&h=184">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <div class='container-fluid mx-auto mt-5 mb-2 col-12' style="text-align: center">
+    <div class="hd text-secondary">All Category</div>
+    <br>
+
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12 ml-5 ">
+            <div class="card-content">
+                <div class="card-body"> <img class="img"width="200" height="250" src="https://tse2.explicit.bing.net/th?id=OIP.PKeqXtmAACKfZm5fPBTzCgHaJT&pid=Api&P=0&w=122&h=153" />
+                    <div class="shadow"></div>
+                    <div class="card-title text-muted">Fashion </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250"  src="https://tse4.mm.bing.net/th?id=OIP.HwoXIVIaOitXrim5Nfw08AHaFj&pid=Api&P=0&w=214&h=160" />
+                    <div class="card-title text-muted">Groceries</div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250" src="https://tse1.mm.bing.net/th?id=OIP.6Sr-zk-cHU9FLnkhpYcbVgHaFt&pid=Api&P=0&w=211&h=163" />
+                    <div class="card-title text-muted"> Elctonics</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12 ml-5 ">
+            <div class="card-content">
+                <div class="card-body"> <img class="img"width="200" height="250" src="https://tse1.mm.bing.net/th?id=OIP.9f0gBXq5Xem0N5evenHciAHaE8&pid=Api&P=0&w=253&h=168" />
+                    <div class="shadow"></div>
+                    <div class="card-title text-muted">Appliances </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250"  src="https://tse1.mm.bing.net/th?id=OIP.9S7js0W7EuZSDbnK1UuOvQHaDh&pid=Api&P=0&w=377&h=179" />
+                    <div class="card-title text-muted">Mobiles</div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250" src="https://tse2.mm.bing.net/th?id=OIP.Lh51x4G3YxKDN-2TPKwSvQHaFW&pid=Api&P=0&w=225&h=162" />
+                    <div class="card-title text-muted">Beauty</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12 ml-5 ">
+            <div class="card-content">
+                <div class="card-body"> <img class="img"width="200" height="250" src="https://tse1.mm.bing.net/th?id=OIP.1kxM3Lmu3QhFS5Xer_bW9wHaC9&pid=Api&P=0&w=427&h=171" />
+                    <div class="shadow"></div>
+                    <div class="card-title text-muted">Sports </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250"  src="https://tse1.mm.bing.net/th?id=OIP.ZA9fy_cEv3QsfmO_U1UBPwHaE8&pid=Api&P=0&w=253&h=169" />
+                    <div class="card-title text-muted">furniture</div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="200" height="250" src="https://static0.therichestimages.com/wordpress/wp-content/uploads/2019/09/Expensive-McDonalds-Toys-Featured-Image.jpg" />
+                    <div class="card-title text-muted">Toys</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<br>
+ <div id="carouselExampleCaptionsdeals" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+      
+    </div>
+    <div class="carousel-inner px-5 p-4 ms-auto">
+      <div class="carousel-item active" style="background-image: url('https://tse1.mm.bing.net/th?id=OIP.-B0vWi8FYi18_CLahUncogHaDt&pid=Api&P=0&w=339&h=169')">
+        <div class="carousel-caption">
+          <h1 style="color: whitesmoke;text-align:left; font-size:500%;">Best Deals!</h1>
+          <br>
+          <h5 style="color:red; text-align: left; font-size:250%;">Save up to 60%</h5>
+
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://tse1.mm.bing.net/th?id=OIP.xx7Gctkf4sJCk3S2GYYL_gHaEL&pid=Api&P=0&w=291&h=164')">
+        <div class="carousel-caption">
+          <h1 style="color:whitesmoke; text-align: right; font-size:500%;">Get exculsive rewards and offers</h1>
+
+        </div>
+     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptionsdeals" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptionsdeals" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </main>
+  <hr/>
+  <br>
+  <footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            For getting rewards and exclusive offers shope our website E-shope
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">gauravsharma.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+<style type="text/css">
+	.carousel-item {
+  height: 75vh;
+  min-height: 200px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+}
+</style>
+</body>
+</html>
